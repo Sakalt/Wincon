@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Windows コンセプト画像メーカー</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+        #toolbar {
+            background: #333;
+            padding: 10px;
+            color: white;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        #canvasContainer {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #fff;
+            position: relative;
+        }
+        #canvas {
+            border: 1px solid #ccc;
+            background-color: #e0e0e0;
+        }
+        #layerControl {
+            display: flex;
+            flex-direction: column;
+            padding: 10px;
+            background: #f5f5f5;
+            width: 200px;
+        }
+        .layerItem {
+            margin-bottom: 5px;
+            cursor: pointer;
+        }
+        .color-picker {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="toolbar">
+        <button id="addWindowBtn">ウィンドウを追加</button>
+        <button id="addTaskbarBtn">タスクバーを追加</button>
+        <button id="addShapeBtn">図形を追加</button>
+        <button id="addLogoBtn">ロゴを追加</button>
+        <input type="color" id="colorPicker" class="color-picker" value="#000000">
+        <button id="exportBtn">エクスポート</button>
+    </div>
+    <div id="canvasContainer">
+        <canvas id="canvas" width="800" height="600"></canvas>
+    </div>
+    <div id="layerControl">
+        <!-- レイヤーリストがここに表示されます -->
+    </div>
+
+    <script src="conceptMaker.js"></script>
+</body>
+</html>
